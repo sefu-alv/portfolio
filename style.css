@@ -1,10 +1,12 @@
-:root {
+ :root {
     --bg: rgb(218, 174, 174);
     --dark: rgb(0, 0, 0);
+    --light:white;
+    --forest-green:linear-gradient(to right, #5a3f37, #2c7744);
 }
 
 body {
-    /* background-color: var(--bg); */
+    background-image: var(--forest-green);
     margin: 0;
     padding: 0;
 }
@@ -15,34 +17,48 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center; /* Vertically align the content within the header */
-    background-color: var(--dark);
+    /* background-color: var(--dark); */
+    background-image: var(--forest-green);
     height: 10vh;
     width: 100%;
     margin: 0;
     padding: 0;
+    border-bottom: 5px solid black;
 }
+/* header img {
+    object-fit: cover;
+    height: 15vh;
+    width: 100%;
+} */
 
 nav {
     position: absolute;
+    top: 5%;
     right: 5%;
     display: flex; /* Align navigation links horizontally */
     align-items: center; /* Vertically align navigation links within nav */
 
 }
 .header-title {
-    display: flex; /* Use flex display for .header-title */
+    display: contents; /* Use flex display for .header-title */
     align-items: center; /* Vertically align the content inside .header-title */
-    width: 25vw;
+    width: 20vw;
+    background-color: aliceblue;
+    border: 5px solid green;
 }
 
 .header-title p {
+    position: absolute;
+    top: 1%;
+    left: 5%;
     text-align: center;
-    color:red;
+    color:var(--dark);
     font-family: "Merriweather", serif;
     flex: 1; /* Take up the remaining space within the .header-title */
     margin: 0; /* Remove default margin on <p> element */
     padding: 0; /* Remove default padding on <p> element */
     font-size: 10ch;
+
 }
 
 /* Optional styling for the navigation links */
@@ -50,28 +66,49 @@ nav a {
     flex-wrap: wrap;
     font-family: "Merriweather", serif;
     padding: 0 10px;
-    color: red;
+    color: var(--dark);
     /* took off the underline of the links */
     text-decoration:none;
+    font-size: 3ch ;
 }
 .side-container{
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 105vh;
-    background-color: var(--dark);
+    height: 150vh;
+    background-color: var(--forest-green);
 }
 
 .side-container > div{
     width: 75%;
-    height: 10vh;
-    border-right: 5px solid red;
     margin: 15vh 0  15vh 0;
     
 
 }
 .side-container h1 {
-    color: red;
+    color:var(--dark);
     text-align: center;
     
+}
+#about-me{
+    display: flex;
+    border-right: 4mm ridge rgba(10, 10, 9, 0.6);
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+#work{
+    display: flex;
+    border-right: 4mm ridge rgba(10, 10, 9, 0.6);
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+#contact{
+    display: flex;
+    border-right: 4mm ridge rgba(10, 10, 9, 0.6);
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
 }
