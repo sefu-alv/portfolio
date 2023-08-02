@@ -1,0 +1,77 @@
+:root {
+    --bg: rgb(218, 174, 174);
+    --dark: rgb(0, 0, 0);
+}
+
+body {
+    /* background-color: var(--bg); */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* made the display flex incase they play around with the with of the screen and added the wrap so the items can wrap around */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* Vertically align the content within the header */
+    background-color: var(--dark);
+    height: 10vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: absolute;
+    right: 5%;
+    display: flex; /* Align navigation links horizontally */
+    align-items: center; /* Vertically align navigation links within nav */
+
+}
+.header-title {
+    display: flex; /* Use flex display for .header-title */
+    align-items: center; /* Vertically align the content inside .header-title */
+    width: 25vw;
+}
+
+.header-title p {
+    text-align: center;
+    color:red;
+    font-family: "Merriweather", serif;
+    flex: 1; /* Take up the remaining space within the .header-title */
+    margin: 0; /* Remove default margin on <p> element */
+    padding: 0; /* Remove default padding on <p> element */
+    font-size: 10ch;
+}
+
+/* Optional styling for the navigation links */
+nav a {
+    flex-wrap: wrap;
+    font-family: "Merriweather", serif;
+    padding: 0 10px;
+    color: red;
+    /* took off the underline of the links */
+    text-decoration:none;
+}
+.side-container{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 105vh;
+    background-color: var(--dark);
+}
+
+.side-container > div{
+    width: 75%;
+    height: 10vh;
+    border-right: 5px solid red;
+    margin: 15vh 0  15vh 0;
+    
+
+}
+.side-container h1 {
+    color: red;
+    text-align: center;
+    
+}
