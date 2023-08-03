@@ -164,8 +164,9 @@
     margin: 10px;
     height: 30vh;
     max-width: 30vw;
-    border: 5px solid white;
+    border: 10px solid white;
     position: relative; 
+    overflow: hidden;
   }
   #work-container > div::before {
     content: "";
@@ -177,27 +178,28 @@
     background-color: rgba(0, 153, 255, 0.5);
     z-index: 1; 
   }
-  #wedding-web{
-    background-image: url("IMG_2165.JPG");
-    background-size: cover;
+  #wedding-web img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #rsvp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     
 
   }
-  #rsvp{
-    background-image: url("7820067.jpg ");
-    background-size: cover;
-    
+  #counter img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
   }
-  #counter{
-    background-image: url("orienteering_39.jpg");
-    background-size: cover;
-    
-
-  }
-  #calculator{
-    background-image: url("schsupbsel03.jpg");
-    background-size: cover;
+  #calculator img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     
 
   }
