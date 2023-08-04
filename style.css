@@ -17,9 +17,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: var(
-      --blended
-    ); /* Set the background image using the blended gradient */
+    background-image: var(--blended); /* Set the background image using the blended gradient */
   }
   
   /* Container to hold the entire content */
@@ -47,6 +45,9 @@
     right: 5%;
     display: flex;
     align-items: center;
+  }
+  a:hover{
+    color: grey;
   }
   
   /* Header title styles */
@@ -122,7 +123,7 @@
     justify-content: center;
     align-items: center;
     width: 12vw;
-    height: 15vh;
+    height: 25vh;
     margin-top: 5ch;
   }
   
@@ -164,7 +165,7 @@
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100vw;
-    margin-top: 48ch;
+    margin-top: 35ch;
   }
   /* styling for boxes within container */
   
@@ -188,6 +189,9 @@
     background-color: rgba(0, 153, 255, 0.5);
     z-index: 1;
     pointer-events: none;
+  }
+ img:hover {
+    opacity: 0.8;
   }
   /* styling for wedding web img */
   #wedding-web img {
@@ -222,13 +226,34 @@
     height: 100%;
     z-index: 2;
   }
+  .work-text{
+    height: 10vh;
+    border: 10px solid rgb(255, 255, 255);
+    position: absolute; 
+    bottom: -10%; 
+    left: 12%; 
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    justify-content: center;
+    background-image: var(--blended); 
+    z-index: 3;
+    width: 7vw;
+    color:var(--text) ;
+    text-align: center;
+    font-size: 1vh;
+  }
   /* styling for h1 in wedding-web */
   #wedding-web h1 {
-    position: absolute;
-    display: flex;
-    justify-content: center;
+    font-size: larger;
+    text-align: center;
+    color: var(--text);
+    padding: 10px;
+  }
+  #wedding-web p {
+    font-family: 'Times New Roman', Times, serif;
     color: var(--text);
   }
+
   /* styling for contanct-me div */
   .contact-me {
     margin-top: 18vh;
@@ -254,5 +279,20 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    /* styling for my icon and hidding it */
+  }
+  .icon-container .icon-text {
+    position: absolute;
+    display: none;
+    left: 55%;
+    top: 110%;
+    transform: translateX(-50%);
+  }
+  /* styling for when my icon is hovered  */
+  .icon-container:hover .icon-text {
+    display: inline;
+    font-size: 2vh;
+    margin: 5%;
+    color: var(--text);
   }
   
