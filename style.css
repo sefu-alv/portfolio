@@ -90,8 +90,13 @@
     width: 100%;
     background-image: url("541_qwjzdhjhy3rpb24glsaxotc3.jpg");
     background-size: cover;
+    text-align: center;
   }
-  
+  #img-container h1{
+   font-family: 'Courier New', Courier, monospace;
+   font-style: italic;
+   font-size: 5vh;
+  }
   /* Content container styles */
   .content {
     display: flex;
