@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
   }
-  a:hover{
+  a:hover {
     color: grey;
   }
   
@@ -92,12 +92,13 @@
     background-size: cover;
     text-align: center;
   }
-  #img-container h1{
-   font-family: 'Courier New', Courier, monospace;
-   font-style: italic;
-   font-size: 5vh;
-   color: var(--text);
+  #img-container h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 5vh;
+    color: var(--text);
   }
+  
   /* Content container styles */
   .content {
     display: flex;
@@ -144,7 +145,8 @@
   }
   
   /* General h1 styles */
-  .side-container h1  {
+  .side-container h1,
+  .work-container h1 {
     justify-content: center;
     color: var(--text);
   }
@@ -165,6 +167,7 @@
     margin-left: 9vw;
     margin-right: 9vw;
   }
+  
   /* setting styling for work container */
   #work-container {
     display: flex;
@@ -173,8 +176,8 @@
     max-width: 100vw;
     margin-top: 35ch;
   }
-  /* styling for boxes within container */
   
+  /* styling for boxes within container */
   #work-container > div {
     flex: 0 0 calc(50% - 20px);
     margin: 10px;
@@ -184,6 +187,7 @@
     position: relative;
     overflow: initial;
   }
+  
   /* styling for the overlaying color on the images */
   #work-container > div::before {
     content: "";
@@ -196,33 +200,39 @@
     z-index: 1;
     pointer-events: none;
   }
- img:hover {
+  
+  img:hover {
     opacity: 0.8;
   }
+  
   /* styling for wedding web img */
   #wedding-web img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
   /* styling for rsvp web img */
   #rsvp img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
   /* styling for counder img */
   #counter img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
   /* styling for calculator img */
   #calculator img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+  
   /* styling for the links in work-container */
   .work-container a {
     text-decoration: none;
@@ -232,22 +242,24 @@
     height: 100%;
     z-index: 2;
   }
-  .work-text{
+  
+  .work-text {
     height: 10vh;
     border: 10px solid rgb(255, 255, 255);
-    position: absolute; 
-    bottom: -10%; 
-    left: 12%; 
+    position: absolute;
+    bottom: -10%;
+    left: 12%;
     transform: translate(-50%, -50%);
     margin-top: 0;
     justify-content: center;
-    background-image: var(--blended); 
+    background-image: var(--blended);
     z-index: 3;
     width: 7vw;
-    color:var(--text) ;
+    color: var(--text);
     text-align: center;
     font-size: 1vh;
   }
+  
   /* styling for h1 in wedding-web */
   #wedding-web h1 {
     font-size: larger;
@@ -255,11 +267,12 @@
     color: var(--text);
     padding: 10px;
   }
+  
   #wedding-web p {
     font-family: 'Times New Roman', Times, serif;
     color: var(--text);
   }
-
+  
   /* styling for contanct-me div */
   .contact-me {
     margin-top: 18vh;
@@ -270,6 +283,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  
   /* styling for contact-me divs */
   .contact-me > div {
     flex: 0 0 calc(50% - 20px);
@@ -279,14 +293,16 @@
     position: relative;
     overflow: initial;
   }
+  
   /* styling for contact me img's */
   .contact-me img {
     margin: 10px;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* styling for my icon and hidding it */
   }
+  
+  /* styling for my icon and hidding it */
   .icon-container .icon-text {
     position: absolute;
     display: none;
@@ -294,6 +310,7 @@
     top: 110%;
     transform: translateX(-50%);
   }
+  
   /* styling for when my icon is hovered  */
   .icon-container:hover .icon-text {
     display: inline;
@@ -302,3 +319,77 @@
     color: var(--text);
   }
   
+
+ /* media query for differt screen sizes */
+  
+  @media (max-width: 600px) {
+    .header-title p {
+      font-size: 5ch;
+    }
+  
+    .side-container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    main {
+      width: 100%;
+    }
+  
+    #about-me,
+    #work,
+    #contact {
+      width: 100%;
+      border-right: none;
+      border-bottom: 5px solid var(--text);
+    }
+  
+    #work-container > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .contact-me {
+      margin-top: 5vh;
+      margin-left: 2vw;
+      height: 20vh;
+      width: 96vw;
+    }
+  
+    .contact-me > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    #about-me-text {
+      font-size: 3vh;
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+  
+    .work-text {
+      font-size: 1.2vh;
+      left: 50%;
+      bottom: 5%;
+      transform: translateX(-50%);
+      width: 90%;
+    }
+  
+  }
+  
+  
+  @media (min-width: 601px) and (max-width: 1200px) {
+    #about-me-text {
+      font-size: 4vh;
+      margin-left: 7vw;
+      margin-right: 7vw;
+    }
+  
+    .work-text {
+      font-size: 1.5vh;
+      left: 50%;
+      bottom: 8%;
+      transform: translateX(-50%);
+      width: 80%;
+    }
+  }
